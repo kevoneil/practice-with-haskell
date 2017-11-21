@@ -32,3 +32,7 @@ length' (_:xs) = 1 + length' xs
 sum' :: (Num a) => [a] -> a
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
+
+capital :: String -> String
+capital "" = "Empty string, whoops!"
+capital all@(x:xs) = "The first letter of all is: " ++ all ++ " is " ++ [x]  

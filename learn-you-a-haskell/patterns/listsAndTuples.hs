@@ -29,10 +29,21 @@ length' :: (Num b) => [a] -> b
 length' [] = 0
 length' (_:xs) = 1 + length' xs
 
+-- recurisive function
+
 sum' :: (Num a) => [a] -> a
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
 
+-- all@ captures the entire string / param
+
 capital :: String -> String
 capital "" = "Empty string, whoops!"
 capital all@(x:xs) = "The first letter of all is: " ++ all ++ " is " ++ [x]  
+
+-- bmi is a function that takes two paramters (where block)
+-- later on, xs is bound 
+
+calcBmis :: (RealFloat a) => [(a, a)] => [a]
+calcBmis xs = [bmi w h | (w, h) <- xs]
+  where bmi weight height = weight / height ^ 2

@@ -8,4 +8,4 @@ numbers = [x | x <- [1..999], x `mod` 3 == 0 || x `mod` 5 == 0]
 totalSum = sum numbers
 
 main = do
-  print $ "The first function returns: " ++ show(totalSum)
+  print $ "The first function returns: " ++ show totalSum
